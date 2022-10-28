@@ -17,9 +17,9 @@ urlpatterns = [
     path('api/',include(router.urls)),
     path('api/subject',views.AddSubject.as_view()),
     path('api/subject/<str:slug>',views.EditSubject.as_view()),
-    path('api/subject/playlist',views.AddPlaylist.as_view()),
+    path('api/add_playlist',views.AddPlay.as_view()),
     path('api/subject/playlist/<str:slug>',views.EditPlaylist.as_view()),
-    
+   
     
     
 ]

@@ -1,5 +1,8 @@
 from rest_framework import serializers
 from .models import Class,Playlist,Subject
+from django.contrib.auth.models import User
+
+
 
 class ClassSerializer(serializers.ModelSerializer):
     class Meta:
