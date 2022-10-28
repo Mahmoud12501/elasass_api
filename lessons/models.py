@@ -5,7 +5,7 @@ from django.utils.text import slugify
 # Create your models here.
 
 class Class(models.Model):
-    name=models.CharField(max_length=100,unique=True)
+    name=models.CharField("Class_name",max_length=100,unique=True)
     slug=models.SlugField(max_length=100,blank=True,null=True,editable = False)
     
     def save(self,*args,**kwargs):
@@ -16,7 +16,7 @@ class Class(models.Model):
         return self.name
     
 class Subject(models.Model):
-    name=models.CharField(max_length=100,unique=True)
+    name=models.CharField("Subject_name ",max_length=100,unique=True)
     describtion=models.TextField(max_length=1000)
     classe=models.ForeignKey(Class,verbose_name=("Classes"),related_name='class_subject',on_delete=models.CASCADE,null=True,blank=True)
     slug=models.SlugField(max_length=100,blank=True,null=True,editable = False)
